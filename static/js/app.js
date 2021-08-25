@@ -3,6 +3,17 @@ var indiviuals = d3.json('samples.json').then(function(data) {
     return data.names
 })
 
-var names = indiviuals.then(data => console.log(data))
+indiviuals.then(function(data) {
+    
+    for (var i = 0; i < data.length; i++) {
+        var elmt = document.createElement('option')
+        elmt.appendChild(document.createTextNode(data[i]))
+        document.getElementById('selDataset').appendChild(elmt)
+    }
+})
 
-console.log(names)
+
+
+function optionChanged(val) {
+
+}
