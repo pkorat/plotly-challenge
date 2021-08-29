@@ -1,13 +1,14 @@
+url = 'https://raw.githubusercontent.com/pkorat/plotly-challenge/main/samples.json'
 
-var indiviuals_names = d3.json('samples.json').then(function(data) { 
+var indiviuals_names = d3.json(url).then(function(data) { 
     return data.names
 })
 
-var indiviual_metadata = d3.json('samples.json').then(function(data) {
+var indiviual_metadata = d3.json(url).then(function(data) {
     return data.metadata
 })
 
-var individual_samples = d3.json('samples.json').then(function(data) {
+var individual_samples = d3.json(url).then(function(data) {
     return data.samples
 })
 
